@@ -41,14 +41,48 @@ a {
     text-decoration: underline;
 }
 
-/* highlighted session box */
-.highlight-box {
+/* scrolling banner */
+
+.scroll-banner {
     background-color: #0000EE;
     color: white;
-    padding: 15px;
-    margin: 20px 0;
-    font-size: 18px;
+
+    width: calc(100% + 100px);
+    margin-left: -50px;
+
+    overflow: hidden;
+
+    padding: 15px 0;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+.scroll-track {
+    display: flex;
+    width: max-content;
+
+    animation: scroll-loop 30s linear infinite;
+}
+
+.scroll-text {
+    white-space: nowrap;
+
+    font-size: 18px;
+
+    padding-right: 100px;
+}
+
+@keyframes scroll-loop {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 
 /* apply link (bigger) */
 .apply-link {
@@ -70,8 +104,18 @@ a {
     <h1>CRITS</h1>
 </div>
 
-<div class="highlight-box">
-The next session will be hosted on the 27th of May 2026, 5:30pm–7:30pm, in my studio at The Bomb Factory Marylebone.
+<div class="scroll-banner">
+    <div class="scroll-track">
+
+        <div class="scroll-text">
+            The next session will be hosted on the 27th of May 2026, 5:30pm–7:30pm, in my studio at The Bomb Factory Marylebone.
+        </div>
+
+        <div class="scroll-text">
+            The next session will be hosted on the 27th of May 2026, 5:30pm–7:30pm, in my studio at The Bomb Factory Marylebone.
+        </div>
+
+    </div>
 </div>
 
 <h3>How to Apply</h3>
@@ -84,6 +128,12 @@ The next session will be hosted on the 27th of May 2026, 5:30pm–7:30pm, in my 
     <li>A brief note on what you’d like to get out of the session</li>
 </ul>
 
+<p>
+<a class="apply-link" href="mailto:studio.bryonyhillman@gmail.com?subject=Horses Mouth Crits Application">
+Apply Here
+</a>
+</p>
+
 <h3>Selection</h3>
 
 <p>
@@ -95,11 +145,6 @@ Each session is limited to six people to make sure there’s enough time for eac
 <b>You will be notified by email if you have been selected for a session.</b>
 </p>
 
-<p>
-<a class="apply-link" href="mailto:studio.bryonyhillman@gmail.com?subject=Horses Mouth Crits Application">
-Apply Here
-</a>
-</p>
 
 <h3>Staying in touch</h3>
 
